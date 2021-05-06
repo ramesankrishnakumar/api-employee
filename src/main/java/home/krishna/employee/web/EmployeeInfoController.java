@@ -10,7 +10,7 @@ import home.krishna.employee.domain.Employee;
 
 
 @RestController
-@RequestMapping("/v1/company/{companyId}/employee-detail")
+@RequestMapping("/v1/company/{companyId}/employee-details")
 public class EmployeeInfoController {
 	
 	@GetMapping
@@ -18,6 +18,7 @@ public class EmployeeInfoController {
 		Employee employee = new Employee();
 		employee.setActiveEmployee(1000);
 		employee.setContractors(100);
+		System.out.println(employee);
 		return ResponseEntity.ok(employee);
 	}
 }
